@@ -1,0 +1,10 @@
+"Home Screen Overview" has [Button(Search), TextView(0), Button(Downloads »), TextView(Get surprised), Button(Queue »), ImageButton(Open menu), Button(Inbox »), ImageButton(Shuffle suggestions), TextView(Manage downloads), Button(Episodes »), Button(Subscriptions »), TextView(Check your classics), TextView(Continue listening), TextView(Home)]
+"Home Screen Overview" click{ImageButton(Open menu)} "Podcast App UI"
+"Podcast App UI" has [TextView(Inbox), Button(Search), TextView(Settings), TextView(0), Button(Downloads »), TextView(Add podcast), TextView(Get surprised), Button(Queue »), TextView(Playback history), Button(Inbox »), ImageButton(Shuffle suggestions), TextView(Downloads), TextView(Manage downloads), TextView(Episodes), Button(Episodes »), TextView(Home), Button(Subscriptions »), TextView(Check your classics), TextView(Continue listening), TextView(Subscriptions), TextView(Queue), ImageButton(Close menu), TextView(Home)]
+"Podcast App UI" click{TextView(Inbox)} **Inbox: No Episodes Yet**
+**Inbox: No Episodes Yet** click{ImageButton(Open menu)} Podcast Inbox View
+Podcast Inbox View click{TextView(Add podcast)} Podcast Discovery Page
+Podcast Discovery Page has [TextView(Suggestions by Apple Podcasts), TextView(Add podcast), ImageButton(Open menu), TextView(Discover), TextView(Search Apple Podcasts), EditText(Search podcast…), TextView(Advanced), TextView(Add podcast by RSS address), TextView(Search fyyd), Button(more »), TextView(Add local folder), TextView(Search Podcast Index), GridView(discover_grid)]
+Podcast Discovery Page(discover_grid) has [ImageViews]
+discover_grid click{ImageView} Podcast description page
+Podcast description page has [Button(Subscribe), TextView(Episodes preview), TextView(·), TextView(Description), ImageButton(Back), FrameLayout(Podcast list)]

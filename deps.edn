@@ -1,0 +1,30 @@
+{:deps    {org.clj-commons/digest                        {:mvn/version "1.4.100"}
+           org.clojure/core.match                        {:mvn/version "1.1.0"}
+           clj-http/clj-http                             {:mvn/version "3.13.0"}
+           cheshire/cheshire                             {:mvn/version "5.13.0"}
+           com.taoensso/telemere                         {:mvn/version "1.0.0-RC1"}
+           datascript/datascript                         {:mvn/version "1.7.3"}
+           org.clojure/core.async                        {:mvn/version "1.7.701"}
+           cloroutine/cloroutine                         {:mvn/version "13"}
+           etaoin/etaoin                                 {:mvn/version "1.1.42"}
+           clojure.java-time/clojure.java-time           {:mvn/version "1.4.3"}
+           org.clojure/data.csv                          {:mvn/version "1.1.0"}
+           org.apache.tika/tika-core                     {:mvn/version "3.0.0"}
+           org.apache.tika/tika-parsers-standard-package {:mvn/version "3.0.0"}
+           org.apache.opennlp/opennlp-tools              {:mvn/version "2.5.3"}
+           com.clojure-goes-fast/clj-async-profiler      {:mvn/version "1.5.0"}
+           io.pedestal/pedestal.service                  {:mvn/version "0.7.2"}
+           io.pedestal/pedestal.route                    {:mvn/version "0.7.2"}
+           io.pedestal/pedestal.jetty                    {:mvn/version "0.7.2"}
+           vvvvalvalval/scope-capture                    {:mvn/version "0.3.2"}
+           org.slf4j/slf4j-api                           {:mvn/version "2.0.16"}
+           org.slf4j/slf4j-simple                        {:mvn/version "2.0.16"}
+
+           }
+ :aliases {:attach   {:jvm-opts ["-Djdk.attach.allowAttachSelf"]}
+           :uberdeps {:replace-deps  {uberdeps/uberdeps {:mvn/version "1.4.0"}}
+                      :replace-paths []
+                      :main-opts     ["-m" "uberdeps.uberjar"]}
+           }
+ :paths   ["src" "resources" "classes"]
+ }

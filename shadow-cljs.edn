@@ -1,0 +1,27 @@
+;; shadow-cljs configuration
+{:source-paths ["src"]
+
+ :dependencies [[reagent                     "1.2.0"]
+                [re-frame                    "1.4.3"]
+                [day8.re-frame/http-fx       "0.2.4"]
+                [cljs-ajax "0.7.5"]
+                [day8.re-frame/tracing       "0.6.2"]
+                [day8.re-frame/re-frame-10x  "1.9.9-SNAPSHOT"]
+                [binaryage/devtools          "1.0.7"]]
+ :dev-http {8280 "resources/public"
+            8290 "target/browser-test"}
+
+ :nrepl    {:port       5555
+            :middleware []}
+
+ :builds   {:app {:target     :browser
+                  :output-dir "resources/public/js/compiled"
+                  :asset-path "/js/compiled"
+                  :modules    {:app {:init-fn com.lucidcode.ide.ui.anki/init!}}
+                  :devtools   {:preloads  [;flow-storm.preload
+                                           day8.re-frame-10x.preload]
+                               :http-root "resources/public/" ;; Must be set to infer default purge targets.
+                               :http-port 8280}
+                  :dev        {:compiler-options {:closure-defines {re-frame.trace.trace-enabled?        true
+                                                                    day8.re-frame.tracing.trace-enabled? true}}}
+                  :release    {}}}}
