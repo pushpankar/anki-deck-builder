@@ -1,6 +1,7 @@
 (ns com.lucidcode.ide.bots.dictionary
   (:require [clojure.data.csv :as csv]
             [clojure.edn :as edn]
+            [clojure.java.io :as io]
             [clojure.string :as str]
             [cheshire.core :as json]))
 
@@ -17,7 +18,7 @@
                 coll)) wordmap wordmap)))
 
 (def dictionary (edn/read-string
-                  (slurp "resources/anki/dictionary.edn"))
+                  (slurp (io/resource "anki/dictionary.edn")))
   #_(parse-dictionary))
 
 

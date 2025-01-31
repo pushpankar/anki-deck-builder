@@ -65,7 +65,7 @@
     (every? proper-noun-in-one-sentence sentences)))
 
 (defonce word-freq-db
-         (with-open [r (io/reader "resources/anki/word_frequency.edn")]
+         (with-open [r (io/reader (io/resource "anki/word_frequency.edn"))]
            (edn/read (PushbackReader. r))))
 
 (defn extract-difficult-words [filepath]
