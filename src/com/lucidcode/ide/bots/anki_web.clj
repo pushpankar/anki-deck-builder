@@ -33,7 +33,7 @@
 
 (defn define-word-local-llm [[word usage]]
   (let [response (with-retry 3
-                             (client/post "http://127.0.0.1:5000/api/meaning"
+                             (client/post "http://40.76.137.53:80/api/meaning"
                                           {:headers {"Content-Type" "application/json"}
                                            :body    (json/generate-string {:word word :sentence usage})}))]
     (if (= 200 (:status response))                          ; Check if response status is OK (200)

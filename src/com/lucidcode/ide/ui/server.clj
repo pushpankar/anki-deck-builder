@@ -113,7 +113,7 @@
 
 (defn save-user-email [request]
   (let [user-email (get-in request [:json-params :email])]
-    (let [response (client/post "http://127.0.0.1:5000/api/save-user-email"
+    (let [response (client/post "http://40.76.137.53:80/api/save-user-email"
                                 {:headers {"Content-Type" "application/json"}
                                  :body    (json/generate-string {:user-email user-email})})]
       (when (= (:status response) 200)
