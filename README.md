@@ -1,4 +1,4 @@
-Anki deck builder is an app for avid readers. It extracts difficult words from a book and adds it to your anki with its definition.
+Anki deck builder is an app for avid readers. It extracts difficult words from a book, lets you select the words you don't know and it programmatically adds those words to your anki with its definition.
 
 ## How to use
 1. Download the app jar from https://github.com/pushpankar/anki-deck-builder/releases/download/v0.1/anki-bot.jar
